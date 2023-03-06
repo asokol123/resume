@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge Alexey Sokolovskiy} \\ \vspace{1pt}
+    \small +7(977)251-21-79 $|$ \href{mailto:alexej.sokolovskiy@gmail.com}{\underline{alexej.sokolovskiy@gmail.com}} $|$ 
+    % \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    \href{https://github.com/asokol123}{\underline{github.com/asokol123}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Higher School of Economics}{Moscow, Russia}
+      {BA, Computer Science}{Aug. 2018 -- Jun 2022}
+    \resumeSubheading
+      {Yandex Data School (center of additional education for programmers)}{Moscow, Russia}
+      {Big data infrastructure}{Sep. 2020 -- Jun 2022}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading
+      {Rust Software Engineer}{Feb. 2022 -- Mar. 2023}
+      {High NU HFT}{}
+      \vspace{0pt}\\
+      \hspace{10pt}
+      Backend team (Rust)
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Created service to store $>$ 40TB of market events and use it in simulation}
+        \resumeItem{Created service to gather, compress, store and monitor $>$ 40TB of logs}
+        \resumeItem{Created distributed computation service to speed up simulation and ML models training by ~40 times}
+        \resumeItem{Installed and configured grafana, influxDB and alertmanager to automatically import time series from production logs and simulations}
+        \resumeItem{Speeded up parsing speed by 3 times by profiling, improving data deserialization and using reference structures}
+        \resumeItem{Improved latency q50-95 by 2 times by developing specialized http client}
+        \resumeItem{Added possibility to trade on OKX by creating rest client and data fetcher}
+        \resumeItem{Improved simulator reliability by creating cgroups and limiting memory and cpu usage}
+        \resumeItem{Created and supported service to view market data from disk, draw plots of prices}
+        \resumeItem{Created service to find differences between production and simulations}
+        \resumeItem{Created parsers for different exchanges which allowed to analyze more data in strategy}
+        \resumeItem{Improved latency by 5ms by bruteforcing more possible AWS configurations}
+        \resumeItem{Developed script to create many ip addresses and instances in aws which increased RPS by 4 times}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software engineer intern}{Jun. 2021 -- Nov 2021}
+      {Yandex LLC}{Moscow, Russia}
+      \vspace{0pt}\\
+      \hspace{10pt}
+      User sessions team (C++, Big data)
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Saved 200 PB of space by migrating data to new format}
+        \resumeItem{Improved data processing speed by 10\% by rewriting legacy algorithm}
+        \resumeItem{Made data format changing much easier by creating data consistency tests}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software engineer/Research intern}{Jun. 2020 -- Nov. 2020}
+      {Ozon technologies}{Moscow, Russia}
+      \vspace{0pt}\\
+      \hspace{10pt}
+      Price monitoring team (Golang, Python, SQL, HTML/CSS)
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Found several ways of bypassing variti, incapsula, qrator and selectel anti-bot protection.}
+        \resumeItem{Implemented web crawler for downloading and parsing $>$1M products per day.}
+        \resumeItem{Created a few utilities for detecting crawlers.}
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Software engineer intern}{Jun. 2019 -- Nov 2019}
+      {Yandex LLC}{Moscow, Russia}
+      \vspace{0pt}\\
+      \hspace{10pt}
+      User sessions team (C++, Python, Big data)
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Created a new monitoring system
+        that allowed other teams to detect errors 10 times faster.}
+        \resumeItem{Developed a new service of real-time session building
+        which led to 30 times faster metrics calculation.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/asokol123/SecretsStorage}{\color{blue}{Secret Storage}}} $|$ \emph{Python, FastAPI, Docker Compose, MongoDB, Git, TravisCI}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a REST API application with uvicorn serving a REST API.}
+            \resumeItem{Implemented secrets expiration and storing encrypted secrets instead of plain text.}
+            \resumeItem{Used MongoDB for asynchronous database operations.}
+            \resumeItem{Configured TravisCI for automatically testing and building.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section {CTF}
+\begin{itemize}[leftmargin=0.15in]
+  \setlength\itemsep{-5px}
+  \item Member of \href{https://ctftime.org/team/83435}{\color{blue}{C4T BuT S4D}} team since 2019.
+  \item Top-4 worldwide according to \href{https://ctftime.org}{\color{blue}{ctftime}} rating among more than 5000 teams.
+  \item Winner of justCTF, FAUST CTF, ENOWARS, p4ctf, and many more
+  \item 16-th place at Google CTF 2022, 24-th place at DEF CON 2022 qualifier
+\end{itemize}
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Rust, C++, Solidity, Golang} \\
+     \textbf{Tools}{: Git, Docker, GitHub Actions} \\
+     \textbf{Other skills}{: Linux, Apache Kafka, Kubernetes, Map-Reduce experience}
+    }}
+ \end{itemize}
+
+\section{Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{2022}{: Google Code Jam 3rd round participant} \\
+    \textbf{2019}{: Google Code Jam 2nd round participant} \\
+    \textbf{2018}{: 1st degree award in the national stage of the Russian National Olympiad in Programming, 26th of over 50000 participants} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
+
