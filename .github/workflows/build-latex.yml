@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push events
   push:
-    
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: xu-cheng/latex-action@v2
         name: Build
@@ -33,23 +33,9 @@ jobs:
           name: resume
           path: main.pdf
 
-
-      - uses: actions/create-release@v1
-        name: Create release
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
+          files: main.pdf
 
-      - uses: actions/upload-release-asset@v1
-        name: Uppload release assets
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf
-          asset_name: resume.pdf
-          asset_content_type: application/pdf
