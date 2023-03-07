@@ -27,6 +27,7 @@
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
+\usepackage{fontawesome5}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -113,9 +114,9 @@
 
 \begin{center}
     \textbf{\Huge Alexey Sokolovskiy} \\ \vspace{1pt}
-    \small +7(977)251-21-79 $|$ \href{mailto:alexej.sokolovskiy@gmail.com}{\underline{alexej.sokolovskiy@gmail.com}} $|$ 
+    \small \href{https://t.me/asokol123}{\underline{\faIcon{telegram} asokol123}} $|$ \href{mailto:alexej.sokolovskiy@gmail.com}{\underline{alexej.sokolovskiy@gmail.com}} $|$ 
     % \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/asokol123}{\underline{github.com/asokol123}}
+    \href{https://github.com/asokol123}{\underline{\faIcon{github} github.com/asokol123}}
 \end{center}
 
 
@@ -145,10 +146,10 @@
 %-------------------------------------------
     \resumeSubheading
       {Rust Software Engineer}{Feb. 2022 -- Mar. 2023}
-      {High NU HFT}{}
+      {High NU HFT}{Remote}
       \vspace{0pt}\\
       \hspace{10pt}
-      Backend team (Rust)
+      Infrastructure team (Rust)
       \vspace{-7pt}
       \resumeItemListStart
         \resumeItem{Created service to store $>$ 20TB of market events and use it in simulation.}
@@ -156,7 +157,7 @@
         \resumeItem{Speeded up simulation and ML models training by creating distributed computation service.}
         \resumeItem{Improved parsing speed by 3 times by profiling, improving data deserialization and using reference structures.}
         \resumeItem{Developed and supported pixel ~-- main service for researches to view and analyze market data.}
-        \resumeItem{Improved latency q50-95 by 2 times by developing specialized http client.}
+        \resumeItem{Improved latency q50-95 by 2 times introducing specialized http client.}
         \resumeItem{Improved simulator reliability by creating cgroups and limiting memory and cpu usage.}
         \resumeItem{Decreased latency by 50\% by using AWS API to find best VM configuration.}
       \resumeItemListEnd
@@ -171,7 +172,7 @@
       \resumeItemListStart
         \resumeItem{Saved 200 PB of space by migrating data to new format.}
         \resumeItem{Improved data processing speed by 10\% by rewriting legacy algorithm.}
-        \resumeItem{Made data format changing much easier by creating data consistency tests.}
+        \resumeItem{Made changing data format much easier by creating data consistency tests.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -196,10 +197,8 @@
       User sessions team (C++, Python, Big data)
       \vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Created a new monitoring system
-        that allowed other teams to detect errors 10 times faster.}
-        \resumeItem{Developed a new service of real-time session building
-        which led to 30 times faster metrics calculation.}
+        \resumeItem{Created a new monitoring system allowing other teams to detect errors 10 times faster.}
+        \resumeItem{Developed a new service of real-time session building leading to 30 times faster metrics calculation.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -214,7 +213,7 @@
             \resumeItem{Developed a REST API application with uvicorn serving a REST API.}
             \resumeItem{Implemented secrets expiration and storing encrypted secrets instead of plain text.}
             \resumeItem{Used MongoDB for asynchronous database operations.}
-            \resumeItem{Configured TravisCI for automatically testing and building.}
+            \resumeItem{Configured TravisCI for testing and building automation.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -224,18 +223,18 @@
 \begin{itemize}[leftmargin=0.15in]
   \setlength\itemsep{-5px}
   \item Member of \href{https://ctftime.org/team/83435}{\color{blue}{C4T BuT S4D}} team since 2019.
-  \item Top-4 worldwide according to \href{https://ctftime.org}{\color{blue}{ctftime}} rating among more than 5000 teams.
+  \item Top-4 worldwide team according to \href{https://ctftime.org}{\color{blue}{ctftime}} rating among more than 5000 teams.
   \item Winner of justCTF, FAUST CTF, ENOWARS, p4ctf, and many more
   \item 16-th place at Google CTF 2022, 24-th place at DEF CON 2022 qualifier
-  \item Tested \href{https://github.com/C4T-BuT-S4D/ctfcup-2022-stage3-part1}{\color{blue}{solidity stage}} of Russia CTF Cup 2022, solved most challanges at \href{https://capturetheether.com/challenges/}{\color{blue}{Capture the Ether}}.
+  \item Tested \href{https://github.com/C4T-BuT-S4D/ctfcup-2022-stage3-part1}{\color{blue}{solidity stage}} of Russia CTF Cup 2022, solved most challenges at \href{https://capturetheether.com/challenges/}{\color{blue}{Capture the Ether}}.
 \end{itemize}
 
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Rust, C++, Solidity, Golang} \\
+     \textbf{Languages}{: Rust, C++, Python, Solidity, Golang} \\
      \textbf{Tools}{: Git, Docker, GitHub Actions} \\
-     \textbf{Other skills}{: Linux, Apache Kafka, Kubernetes, Map-Reduce experience}
+     \textbf{Other skills}{: Linux, MongoDB, Grafana, Apache Kafka, Kubernetes, Map-Reduce experience}
     }}
  \end{itemize}
 
